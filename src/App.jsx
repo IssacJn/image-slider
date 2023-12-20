@@ -1,7 +1,13 @@
+import ScrollArrows from "./components/ScrollArrows";
+
 import "./App.css";
 
 function App() {
-	return <div>Welcome</div>;
+	return (
+		<div>
+			<ScrollArrows />
+		</div>
+	);
 }
 
 export default App;
