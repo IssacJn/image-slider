@@ -27,7 +27,7 @@ function ScrollArrows() {
 			</div>
 
 			{/* Down Arrow */}
-			<div className={styles.arrow} onClick={() => handleScroll(-1)}>
+			<div className={styles.arrow} onClick={() => handleScroll(1)}>
 				&#8595;
 			</div>
 		</div>

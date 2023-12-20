@@ -1,0 +1,16 @@
+.imgContent {
+	height: 100vh;
+	position: relative;
+}
+
+.textContent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 5px 15px;
+	transform: translate(-50%, -50%);
+	background: rgba(154, 152, 152, 0.5);
+	color: white;
+	font-style: italic;
+	border-radius: 20px;
+}
