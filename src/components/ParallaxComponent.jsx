@@ -6,12 +6,24 @@ import image2 from "./images/image2.jpg";
 import image3 from "./images/image3.jpg";
 
 const images = [image1, image2, image3];
+let parallaxType;
 
 function ParallaxComponent({
 	strength,
 	blurMin = undefined,
 	blurMax = undefined,
 }) {
+	//To set the type of Parallax Effect over the image
+	if (strength > 0 && (blurMin || blurMax)) {
+		parallaxType = "Parallax with Dynamic Blur Effect";
+	} else if (strength < 0 && (blurMin || blurMax)) {
+		parallaxType = "Reverse Parallax with Blur";
+	} else if (strength > 0 && !blurMin && !blurMax) {
+		parallaxType = "Normal Parallax Effect";
+	} else if (strength < 0 && !blurMin && !blurMax) {
+		parallaxType = "Reverse Parallax Effect";
+	}
+
 	return (
 		<div>
 			{images.map((image, index) => {
@@ -24,7 +36,7 @@ function ParallaxComponent({
 					>
 						<div className={styles.imgContent}>
 							<div className={styles.textContent}>
-								Parallax Effect
+								{parallaxType}
 							</div>
 						</div>
 					</Parallax>
